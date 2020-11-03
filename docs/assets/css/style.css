@@ -1,0 +1,172 @@
+/*********************
+________GLOBAL    
+                *****/
+body {
+  margin: 0;
+  width: 100vw;
+  width: 100%;
+  height: 100vh;
+  color: #2a2a2a;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial;
+}
+
+input, button { margin: 0; padding: 8px 12px 6px; }
+input:focus, button:focus { outline: none; }
+
+
+
+/*********************
+________MAIN UI APP    
+                *****/
+                
+.main-ui {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.problem {
+  font-size: 7rem;
+  font-weight: 400;
+  margin: 15px auto;
+  text-align: center;
+}
+
+.our-form {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.our-field {
+  border: 3px solid rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn {
+  border: 3px solid #000;
+  background-color: #fff;
+  color: #2a2a2a;
+}
+
+.p-text {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 10px auto;
+  text-align: center;
+}
+
+
+/*********************
+________PROGRESS BAR     
+                *****/
+.boxes {
+  display: flex;
+  width: 100%;
+}
+
+.progress {
+  width: 80%;
+  margin: 0 auto;
+
+  position: relative;
+  border: 1px solid #c7c7c7;
+  border-right: none;
+}
+.progress-inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #7ecc00;
+  opacity: .57;
+  transform: scaleX(0);
+  transform-origin: center left;
+  transition: transform .4s ease-out;
+}
+
+.box {
+  flex: 1;
+  height: 40px;
+  border-right: 1px solid #c7c7c7;
+}
+
+
+
+/***********************
+________OVERLAY WINDOW    
+                ********/
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, .82);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .33s ease-out;
+  transform: scale(1.2);
+}
+
+.overlay-inner {
+  text-align: center;
+  max-width: 700px;
+}
+
+body.overlay-is-open .overlay,
+.overlay--visible {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+body.overlay-is-open .main-ui,
+.blurred {
+  filter: blur(4px);
+}
+
+
+.end-message {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.reset-button {
+  font-size: 1.2rem;
+  margin: 0 auto;
+  display: block;
+  background-color: #004094;
+  border: none;
+  color: #fff;
+  outline: none;
+  border-radius: 7px;
+  padding: 12px 20px;
+  display: inline-block;
+  cursor: pointer;
+}
+.reset-button:hover {
+  background-color: #00367e;
+}
+.reset-button:focus {
+  background-color: #00275a;
+}
+
+
+
+/***********************
+________ANIMATION    
+                ********/
+@keyframes showError {
+  50% {
+    color: red;
+    transform: scale(1.2);
+  }
+  100% {
+    color: #333;
+    transform: scale(1);
+  }
+}
+
+.animate-wrong {
+  animation: .45s showError;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!--   meta tags   -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!--    style.css  file  -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!--   title  -->
+    <title>Math Game</title>
+  </head>
+
+  <body>
+
+    <!--  MAIN APP  -->
+    <div class="main-ui">
+      <!--  problem  -->
+      <p class="problem"></p>
+
+      <!--   FORM  -->
+      <form class="our-form">
+        <input type="text" class="our-field" autocomplete="off">
+        <button class="submit-btn">Submit</button>
+      </form>
+
+      <!--  desc  -->
+      <p class="p-text">You need <span class="points-needed">10</span> more points, and are allowed to make <span class="mistakes-allowed">2</span> more mistakes.</p>
+
+
+      <!--   PROGRESS BAR  -->
+      <div class="progress">
+
+        <div class="boxes">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+
+        <div class="progress-inner"></div>
+
+      </div>
+    </div>
+
+    <!--  OVERLAY WINDOW  -->
+    <div class="overlay">
+
+      <div class="overlay-inner">
+        <p class="end-message">Congrats, You won.</p>
+        <button class="reset-button">Start over</button>
+      </div>
+
+    </div>
+    
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
