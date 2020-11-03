@@ -13,6 +13,16 @@ body {
 input, button { margin: 0; padding: 8px 12px 6px; }
 input:focus, button:focus { outline: none; }
 
+header {
+  height: 20vh;
+  width: 100%;
+}
+h1 {
+  font-size: 8rem;
+  text-align: center;
+  width: 100%;
+}
+
 
 
 /*********************
@@ -21,6 +31,7 @@ ________MAIN UI APP
                 
 .main-ui {
   max-width: 800px;
+  height: 80vh;
   margin: 0 auto;
 }
 .problem {
@@ -169,4 +180,18 @@ ________ANIMATION
 
 .animate-wrong {
   animation: .45s showError;
+}
+
+
+/***********************
+________MEDIA QUERIES   
+                ********/
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+  .problem {
+    font-size: 2.7rem;
+  }
 }
